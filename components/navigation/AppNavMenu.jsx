@@ -14,6 +14,7 @@ import {
   hideOnMobile,
 } from "@styles/styles";
 import UserProfile from "../UserProfile";
+import NotificationsList from "../NotificationsList";
 
 const AppNavMenu = (props) => {
   return (
@@ -36,6 +37,7 @@ const AppNavMenu = (props) => {
             </Typography>
           </Box>
           <Box sx={hideOnMobile}>
+            <NotificationsList />
             <UserProfile />
           </Box>
         </Box>
