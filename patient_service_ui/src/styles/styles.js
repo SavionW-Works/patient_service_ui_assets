@@ -8,23 +8,14 @@ export const appWrapper = {
   height: "100vh",
   overflow: "hidden",
 };
+
 /***********************
  * Navigation
  ************************/
 
-export const searchBar = {
-  display: "flex",
-  alignItems: "center",
-  width: 400,
-  boxShadow: 0,
-  border: "1px solid #ccc",
-  borderRadius: 0,
-  mr: 1,
-};
-
 export const appBar = {
-  backgroundColor: "white",
-  color: "#000",
+  backgroundColor: "#007BFF",
+  color: "#fff",
 };
 
 export const toolbarWrapper = {
@@ -42,10 +33,9 @@ export const logoText = {
 /***********************
  * SideList
  ************************/
-
 export const sideListWrapper = {
   width: "100%",
-  bgcolor: "background.paper",
+  bgcolor: "#007BFF",
   borderRight: "1px solid #ddd",
 };
 
@@ -58,17 +48,6 @@ export const notificationWrapper = {
   pb: 0,
 };
 
-/***********************
- * Card.js
- ************************/
-
-export const appCardList = {
-  width: "100%",
-  bgcolor: "background.paper",
-  p: 0,
-  m: 0,
-  maxWidth: "100%",
-};
 /***********************
  * AppContentArea
  ************************/
