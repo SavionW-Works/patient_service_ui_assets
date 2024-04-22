@@ -6,7 +6,12 @@ import {
   flexColumnGrow,
   sideListWrapper,
 } from "@styles/styles";
-
+import Patients from "@components/Patients";
+import Home from "@components/Home";
+import Hospitals from "@components/Hospitals";
+import Physicians from "@components/Physicians";
+import Nurses from "@components/Nurses";
+import Appointments from "@components/Appointments";
 const AppContentArea = ({ isOpen }) => {
   const sideBarWidth = isOpen ? "70px" : "250px";
 
@@ -46,7 +51,12 @@ const AppContentArea = ({ isOpen }) => {
               width: `calc(100vw - ${sideBarWidth})`,
             }}
           >
-            &nbsp;
+            <Patients />
+            <Home />
+            <Hospitals />
+            <Physicians />
+            <Nurses />
+            <Appointments />
           </Box>
         </Box>
       </Box>
