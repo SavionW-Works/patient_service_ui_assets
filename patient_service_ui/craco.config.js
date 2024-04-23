@@ -12,6 +12,7 @@ module.exports = {
       "@themes": path.join(path.resolve(__dirname, "./src/themes")),
       "@hooks": path.join(path.resolve(__dirname, "./src/hooks")),
       "@styles": path.join(path.resolve(__dirname, "./src/styles")),
+      "@utils": path.join(path.resolve(__dirname, "./src/utils")),
     },
   },
 };
