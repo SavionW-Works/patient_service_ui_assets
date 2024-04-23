@@ -24,6 +24,8 @@ const PatientsList = () => {
         console.log("Failed to fetch patients", error);
       }
     };
+
+    fetchPatients();
   }, []);
   return (
     <>
@@ -40,3 +42,10 @@ const PatientsList = () => {
 };
 
 export default PatientsList;
+
+/**
+- Make sure your backend's main.py has the right CORs to communicate with the backend 
+localhost:3000 
+localhost:8000 
+localhost:5432 (port of postgres)
+*/
