@@ -3,6 +3,9 @@ import { PatientService } from "@utils/api";
 import { DataGrid } from "@mui/x-data-grid";
 const PatientsList = () => {
   const [patientData, setPatientData] = useState([]);
+  const [selectedPatient, setSelectedPatient] = useState({});
+  const [loading, setLoading] = useState(false);
+  const [openModal, setOpenModal] = useState(false);
   const columns = [
     { field: "id", headerName: "ID", width: 70 },
     { field: "full_name", headerName: "Full Name", width: 200 },
@@ -27,12 +30,25 @@ const PatientsList = () => {
 
     fetchPatients();
   }, []);
+
+  const handleRowClick = async (params) => {
+    try {
+      const patientDetails = await PatientService.getPatientByPatientId(
+        params.id
+      );
+      console.log("patientDetails:: ", patientDetails);
+      setSelectedPatient(patientDetails);
+    } catch (error) {
+      console.log("error loading selected patient");
+    }
+  };
   return (
     <>
       <div style={{ height: 400, width: "100%" }}>
         <DataGrid
           rows={patientData}
           columns={columns}
+          onRowClick={handleRowClick}
           pageSize={5}
           checkboxSelection
         />

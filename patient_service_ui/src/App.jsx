@@ -17,12 +17,12 @@ const App = () => {
         <AppContentArea />
       </Box>
       <Routes>
-        <Route path="/patients" element={<Patients />} />
+        {/* <Route path="/patients" element={<Patients />} />
         <Route path="/home" element={<Home />} />
         <Route path="/hospitals" element={<Hospitals />} />
         <Route path="/physicians" element={<Physicians />} />
         <Route path="/nurses" element={<Nurses />} />
-        <Route path="/appointments" element={<Appointments />} />
+        <Route path="/appointments" element={<Appointments />} /> */}
       </Routes>
     </BrowserRouter>
   );
